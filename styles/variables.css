@@ -1,15 +1,15 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-  --font-family: 'Inter Variable';
+  --font-family: 'Inter';
   --second-family: 'PressStart2P';
   --font-size: 18px;
   --font-weight: 400;
   --font-weight-bold: 700;
   --logo-font-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
   --title-font-size: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
-  --header-width: clamp(23.438rem, 17.634rem + 29.018vw, 43.75rem);
+  /*--header-width: clamp(23.438rem, 17.634rem + 29.018vw, 43.75rem);*/
   --color: #000;
-  --card-width: clamp(23.438rem, 17.705rem + 28.661vw, 43.5rem);
+  --card-width: clamp(20rem, 13.214rem + 33.929vw, 43.75rem);
   --color-stroke: pink;
 
 

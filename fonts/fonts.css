@@ -1,6 +1,6 @@
 /* В этом файле вы импортируете все шрифты для сайта. Один из них вариативный и требует особенной настройки */
 @font-face {
-  font-family: 'Inter-Variable';
+  font-family: 'Inter';
   font-display: swap;
   src: local('Inter-Variable'), url(../fonts/Inter-Variable.woff2) format('woff2 supports variations');
   src: local('Inter-Variable'), url(../fonts/Inter-Variable.woff2) format('woff2-variations');
@@ -17,6 +17,6 @@
 
 @supports (font-variation-settings: normal) {
   .page {
-    font-family: 'Inter-Variable', sans-serif;
+    font-family: 'Inter', sans-serif;
   }
 } 

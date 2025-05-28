@@ -36,7 +36,7 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  max-inline-size: var(--header-width);
+  inline-size: var(--card-width);
   font-family: var(--second-family);
   font-weight: var(--font-weight);
   text-transform: uppercase;
@@ -47,9 +47,7 @@
   padding: clamp(7.5rem, 7.357rem + 0.714vw, 8rem) 0;
 }
 
-.header-width {
-  width: 100%;
-}
+
 
 .logo {
   font-size: var(--logo-font-size);
@@ -64,16 +62,13 @@
   margin: 25px auto;
 }
 
-.card-width {
-
-}
-
 .subtitle {
   font-family: var(--font-family);
   font-weight: var(--font-weight-bold);
+  font-variation-settings: "wght" var(--font-weight-bold);
   font-size: var(--font-size);
   color: var(--color);
-  padding: 4px 10px;
+  padding: 5px 10px;
 }
 
 .card-img {
@@ -114,5 +109,79 @@
 @supports (text-stroke: 0.5px var(--color-stroke)) {
   .lable {
     text-stroke: 0.5px var(--color-stroke);
+  }
+}
+
+.text {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+  line-height: 117%;
+  color:var(--color);
+  margin: 25px;
+}
+
+.card__icon-button {
+
+}
+
+.card__like-button {
+  align-content: flex-end;
+}
+
+.button-floppy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  font-family: var(--second-family);
+  font-weight: var(--font-weight);
+  font-size: 14px;
+  line-height: 90%;
+  color: var(--color);
+}
+
+.dialog {
+  max-inline-size: clamp(21.313rem, 21.098rem + 1.071vw, 22.063rem);
+  background-color: #fff;
+  padding: 30px 40px;
+}
+
+.dialog::backdrop {
+  background-image: url(/images/background.jpg);
+  opacity: 0.75;
+}
+
+.dialog-form {
+  display: grid;
+  font-family: var(--second-family);
+  font-size: 14px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: var(--color);
+}
+
+.dialog-move {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  align-items: center;
+  gap: 20px; 
+  padding-bottom: 30px;
+}
+
+.dialog-button {
+line-height: 90%;
+border: 2px solid #000;
+background-color: #fff;
+padding: 9px 17px;
+}
+
+@media (width <= 375px) {
+  .header-width {
+    width: 100%;
+  }
+
+  .card-width {
+    width: 100%;
   }
 }
