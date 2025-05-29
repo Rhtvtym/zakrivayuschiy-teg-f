@@ -93,6 +93,39 @@
     aspect-ratio: 1/1;
     border-top: 2px solid var(--border-color);
     border-bottom: 2px solid var(--border-color);
+    
+}
+
+.image-cup {
+    filter: sepia(70%);
+}
+
+.image-dog {
+    filter: brightness(200%);
+}
+
+.image-dove {
+    filter: grayscale(100%);
+}
+
+.image-fish {
+    filter: hue-rotate(77deg);
+}
+
+.image-fox {
+    filter: invert(33%);
+}
+
+.image-ghost {
+    filter: opacity(0.3);
+}
+
+.image-mermaids {
+    filter: saturate(7);
+}
+
+.image-tango {
+    filter: sepia(50%) brightness(350%);
 }
 
 .lable {
@@ -274,9 +307,7 @@ span {
     background-color: #fff;
 }
 
-.save {
-    padding-top: 8px;
-}
+
 
 .dialog {
     max-inline-size: clamp(21.313rem, 21.098rem + 1.071vw, 22.063rem);
@@ -330,5 +361,9 @@ span {
 
     .lable {
       right: 11px;
+    }
+
+    .save {
+    padding-top: 8px;
     }
 }
