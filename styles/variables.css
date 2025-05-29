@@ -11,7 +11,9 @@
   --color: #000;
   --card-width: clamp(20rem, 13.214rem + 33.929vw, 43.75rem);
   --color-stroke: pink;
-
-
-
+  --border-color: #000;
+  --background-image: (url(/images/background.jpg));
+  --color-mix: #fff;
+  --contour-color: #000;
+  --animation-fill-color: #FF0000;
 }
