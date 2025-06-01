@@ -75,7 +75,6 @@
     aspect-ratio: 1/1;
     border-top: 2px solid var(--border-color);
     border-bottom: 2px solid var(--border-color);
-    
 }
 
 .image-sepia {
@@ -122,7 +121,12 @@
     top: 25px;
     right: 25px;
     text-shadow: -1px -1px 0 var(--color-stroke), 1px -1px 0 var(--color-stroke), 1px 1px 0 var(--color-stroke), -1px 1px 0 var(--color-stroke), 0 -1px 0 var(--color-stroke), 0 1px 0 var(--color-stroke), 0 0 0 var(--color-stroke);
-    
+}
+
+span {
+    position: relative;
+    z-index: 1;
+    color: var(--color);
 }
 
 @supports (text-stroke: 1px var(--color-stroke)) or (-webkit-text-stroke: 1px var(--color-stroke)) {
@@ -133,7 +137,7 @@
 }
 
 .text {
-    font-family: var(--font-family),sans-serif;
+    font-family: var(--font-family), sans-serif;
     font-weight: var(--font-weight);
     font-size: var(--font-size);
     line-height: 117%;
@@ -149,8 +153,14 @@
     gap: 6px;
 }
 
-.main-body, .core {
-    transition: 0.3 ease;
+.main-body {
+    fill: transparent;
+    transition: 0.3s;
+}
+
+.core {
+    fill: transparent;
+    transition: 0.3s 0.03s;
 }
 
 .like-icon:hover .main-body {
@@ -219,13 +229,20 @@
     cursor: pointer;
 }
 
+.button__text {
+    position: relative;
+    color: #fff;
+    mix-blend-mode: difference;
+    background-color: #000;
+}
+
 .button::before {
     position: absolute;
     content: "";
     background: #000;
     inset: 0;
-    transition: transform 0.3s;
-    transform-origin: 0 0; 
+    transition: 0.5s ease-in-out;
+    transform-origin: 0 0;
     top: 0;
     left: 0;
     width: 100%;
@@ -237,16 +254,9 @@
     transform: scaleX(1);
 }
 
-.button__text {
-    position: relative;
-    color: #fff;
-    mix-blend-mode: difference;
-}
-
 .button:focus {
     outline: none;
     box-shadow: 2px 2px #000;
-    transition: 0.3s ease;
 }
 
 .card__icon-button {
@@ -276,7 +286,6 @@
     position: relative;
     width: 130px;
     height: 38px;
-    transition: 0.3s ease;
 }
 
 .button-floppy {
@@ -286,12 +295,14 @@
     justify-content: space-around;
     gap: 8px;
     margin: 0 auto 100px;
-    padding: 11px 14px;
+    padding: 15px 20px;
     background-color: #fff;
 }
 
-.button-dialog {
-    text-transform: uppercase;
+.icon-svg {
+    color: #fff;
+    mix-blend-mode: difference;
+    background-color: #000;
 }
 
 .dialog {
@@ -322,6 +333,10 @@
     padding-block-end: 30px;
 }
 
+.dialog .button {
+    text-transform: uppercase;
+}
+
 @media (width <= 375px) {
     .header-width {
         width: 100%;
@@ -343,5 +358,10 @@
 
     .button-floppy {
         padding: 15px 20px;
+    }
+
+    .icon-svg {
+        width: 28px;
+        height: 28px;
     }
 }

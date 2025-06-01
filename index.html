@@ -215,20 +215,22 @@
         type="button" 
         onclick="window['floppy'].showModal()" 
         aria-controls="floppy">
-        <svg class="svg-floppy" width="29" height="28" viewBox="0 0 29 28">
+        <svg class="icon-svg" width="21" height="21" viewBox="0 0 29 28" fill="currentColor">
           <use href="./svg/floppy.svg#floppy" />
         </svg>
-        <span class="button__text save">Сохранить на память</span>
+        <span class="button__text">Сохранить на память</span>
       </button>
       <dialog id="floppy" class="dialog" aria-label="Сохранить на дискету" >
         <form class="dialog-form" method="dialog">
           <div class="dialog-move">
-            <svg width="39" height="39" viewBox="0 0 29 28"> 
+            <svg  width="39" height="39" viewBox="0 0 29 28"> 
               <use href="./svg/floppy.svg#floppy" />
             </svg>
             <p>Вставьте дискету, чтобы продолжить</p>
           </div>
-          <button class="button button__text button-dialog" type="submit">ок</button>
+          <button class="button" type="submit">
+            <span class="button__text">ok</span>
+          </button>
         </form>
       </dialog>
     </main>
